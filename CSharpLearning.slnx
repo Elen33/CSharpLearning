@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="01_HelloWorldPractice/01_HelloWorldPractice.csproj" />
+  <Project Path="02_VariablePractice/02_VariablePractice.csproj" />
+  <Project Path="03_OperatorsPractice/03_OperatorsPractice.csproj" />
+  <Project Path="04_IfPractice/04_IfPractice.csproj" />
+  <Project Path="05_SwitchPractice/05_SwitchPractice.csproj" />
+  <Project Path="06_ForLoopPractice/06_ForLoopPractice.csproj" />
+  <Project Path="07_WhileLoopPractice/07_WhileLoopPractice.csproj" />
+  <Project Path="08_ForeachLoopPractice/08_ForeachLoopPractice.csproj" />
+</Solution>
