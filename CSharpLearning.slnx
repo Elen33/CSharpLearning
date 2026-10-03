@@ -7,4 +7,7 @@
   <Project Path="06_ForLoopPractice/06_ForLoopPractice.csproj" />
   <Project Path="07_WhileLoopPractice/07_WhileLoopPractice.csproj" />
   <Project Path="08_ForeachLoopPractice/08_ForeachLoopPractice.csproj" />
+  <Project Path="09_LoopNestingPractice/09_LoopNestingPractice.csproj" Id="0f50bcb0-19d1-41bc-a89b-15298ea53106" />
+  <Project Path="10_ControlFlowTestPractice/10_ControlFlowTestPractice.csproj" Id="a3f94031-d6a1-4442-a7b6-eb29c9f4e6de" />
+  <Project Path="11_ClassPractice/11_ClassPractice.csproj" Id="5d4d3674-b88b-4c0c-bc55-c0481c8c5c6a" />
 </Solution>
