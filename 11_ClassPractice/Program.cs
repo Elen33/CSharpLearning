@@ -71,42 +71,42 @@
                 5. 类可以有访问修饰符（public，private，protected，internal），用于控制类的可见性和访问权限；
              */
 
-            Book CSharp = new Book();
-            CSharp.title = "C# Programming";
-            CSharp.author = "John.Doe";
-            CSharp.price = 99;
-            Book Unity = new Book();
-            Unity.title = "Unity Game Development";
-            Unity.author = "Jane Smith";
-            Unity.price = 100;
-            Console.WriteLine($"Book 1: {CSharp.title} by {CSharp.author}, Price: ${CSharp.price}");
-            Console.WriteLine($"Book 2: {Unity.title} by {Unity.author}, Price: ${Unity.price}");
+            Book book1 = new Book();    // 创建第一个Book对象
+            book1.Title = "《C# Programming》";
+            book1.Author = "John.Doe";
+            book1.Price = 99;
+            Book book2 = new Book();    // 创建第二个Book对象
+            book2.Title = "《Unity Game Development》";
+            book2.Author = "Jane Smith";
+            book2.Price = 100;
+            Book book3 = new Book();    //  创建第三个Book对象
+            book3.Title = "《Python Programming》";
+            book3.Author = "Alice Johnson";
+            book3.Price = 89;
+            Console.WriteLine($"Book 1 title is: {book1.Title} by {book1.Author}, Price: ${book1.Price}");
+            Console.WriteLine($"Book 2 title is: {book2.Title} by {book2.Author}, Price: ${book2.Price}");
+            Console.WriteLine($"Book 3 title is: {book3.Title} by {book3.Author}, Price: ${book3.Price}");
             Console.ReadKey();
             Console.Clear();
 
-            Person sam = new Person();
-            sam.name = "Sam";
-            sam.age = 25;
-            sam.gender = "Male";
-            sam.StudentID = "S001";     // 通过属性访问私有字段，赋值时自动调用set访问器；
-            Person jimmy = new Person();
-            jimmy.name = "Jimmy";
-            jimmy.age = 22;
-            jimmy.gender = "Male";
-            Person lisa = new Person();
-            lisa.name = "Lisa";
-            lisa.age = 23;
-            lisa.gender = "Female";
-            Console.WriteLine($"Person 1: {sam.name}, Age: {sam.age}, Gender: {sam.gender}，Student ID: {sam.StudentID}"); // 通过属性访问私有字段，读取时自动调用get访问器
-            Console.WriteLine($"Person 2: {jimmy.name}, Age: {jimmy.age}, Gender: {jimmy.gender}");
-            Console.WriteLine($"Person 3: {lisa.name}, Age: {lisa.age}, Gender: {lisa.gender}");
-            lisa.SayHello();
+            Person person1 = new Person();  // 创建第一个Person对象
+            person1.Name = "Sam";
+            person1.Age = 25;
+            person1.SayHello();
+            Person person2 = new Person();  //  创建第二个Person对象
+            person2.Name = "Jimmy";
+            person2.Age = 22;
+            person2.SayHello();
+            Person person3 = new Person();  //  创建第三个Person对象
+            person3.Name = "Lisa";
+            person3.Age = 23;
+            person3.SayHello();
             Console.ReadKey();
             Console.Clear();
 
             Rectangle rectangle1 = new Rectangle();
             rectangle1.ShowLengthPrompt();
-            while (true)
+            while (true)    // 循环直到用户输入有效的长度，在Main函数中负责实现与用户的交互，获取输入并进行验证，后方的类责接收和存储与计算；
             {
                 if (!double.TryParse(Console.ReadLine(), out double length))
                 {
@@ -126,7 +126,7 @@
                 }
             }
             rectangle1.ShowWidthPrompt();
-            while (true)
+            while (true)    // 循环直到用户输入有效的宽度，在Main函数中负责实现与用户的交互，获取输入并进行验证，后方的类责接收和存储与计算；
             {
                 if (!double.TryParse(Console.ReadLine(), out double width))
                 {
@@ -150,6 +150,38 @@
             //rectangle1.Area();
             //rectangle1.Perimeter();
             rectangle1.DisplayInfo();
+            Console.ReadKey();
+            Console.Clear();
+
+            Student student1 = new Student("张三",20,"Male","S001");
+            student1.Score = 98.5;
+            //student1.Password = "12345";
+            Console.WriteLine($"Student01:{student1.Name},Age:{student1.Age},Gender:{student1.Gender},Student ID:{student1.StudentID},Score:{student1.Score}");
+            Console.ReadKey();
+            Console.Clear();
+
+            Circle circle1 = new Circle();  // 创建一个Circle对象
+            Console.WriteLine("Please enter the radius of the circle:");
+            while (true)    // 循环直到用户输入有效的半径，在Main函数中负责实现与用户的交互，获取输入并进行验证，后方的类责接收和存储与计算；
+            {
+                if (!double.TryParse(Console.ReadLine(), out double radius))
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.Please re-enter the radius!");
+                    continue;
+                }
+                else if (radius <= 0)
+                {
+                    Console.WriteLine("Invalid input. The radius cannot be 0 or negative.Please re-enter the radius!");
+                    continue;
+                }
+                else
+                {
+                    circle1.Radius = radius;
+                    Console.WriteLine($"Radius set successfully.");
+                    break;
+                }
+            }
+            Console.WriteLine($"circle1: Radius = {circle1.Radius},Area = {circle1.Area:F2},Perimeter = {circle1.Perimeter:F2}"); // 输出圆的半径、面积和周长
         }
     }
 }

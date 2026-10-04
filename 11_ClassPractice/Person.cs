@@ -6,6 +6,27 @@ namespace _11_ClassPractice
 {
     public class Person
     {
+        public string Name { get; set; }
+        private int age;
+        public int Age
+        {
+            get { return age; }
+            set
+            {
+                if (value < 0)
+                {
+                    age = 0;
+                }else if (value > 150)
+                {
+                    age = 150;
+                }
+                else
+                {
+                    age = value;
+                }
+            }
+        }
+        /*
         public string name;     // 字段（Field）是类的成员变量，用于存储对象的状态信息
         public int age;
         public string gender;
@@ -21,9 +42,10 @@ namespace _11_ClassPractice
                 studentID = value;
             }
         }
+        */
         public void SayHello()  // 方法（Method）是类的成员函数，用于定义对象的行为和操作（方法名用大驼峰命名法）
         {
-            Console.WriteLine($"Hello, my name is {name}, I am {age} years old, and I am a {gender}.");
+            Console.WriteLine($"Hello, my name is {Name}, I am {Age} years old.");
         }
 
         /*
